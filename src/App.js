@@ -9,7 +9,7 @@ class App extends React.Component {
     state=
     {
         data:{},
-        country:"",
+        country:" ",
     }
     async componentDidMount(){
         const data = await fetchData();
@@ -26,7 +26,7 @@ class App extends React.Component {
              <img className={styles.image} src={image} alt ="COVID-19"/>
              <Cards data ={data} />
              <Countrypicker handleCountryChange ={this.handleCountryChange}/>
-             <Chart data ={data} country ={country}/>
+             <Chart data = {data} country = {country}/>
         </div> );
     }
 }
